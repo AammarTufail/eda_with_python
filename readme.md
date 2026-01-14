@@ -52,6 +52,9 @@ pip install sweetviz pandas openpyxl ipykernel
 pip uninstall numpy -y
 conda install numpy==1.23.4 -y
 ```
+> Here is the [code](./04_sweetviz/) to use Sweetviz for EDA.
+> Note: Sweetviz has compatibility issues with numpy versions >=1.24. The above commands ensure that numpy 1.23.4 is installed to avoid such issues.
+> If you face any issues related to numpy version, please follow the above steps to create a new conda environment and install the required packages.
 
 ### 5. skimpy
 To install skimpy, you can use pip. Open your terminal or command prompt and run the following command:
@@ -62,6 +65,7 @@ conda activate skimpy
 pip install skimpy jupyterlab notebook ipython pandas openpyxl 
 pip install polars-lts-cpu # only if the system has a CPU with ARM architecture
 ```
+> Here is the [code](./05_skimpy/) to use skimpy for EDA.
 
 ### 6. Dataprep
 To install Dataprep, you can use pip. Open your terminal or command prompt and run the following command:
@@ -72,6 +76,8 @@ conda activate dataprep
 pip install dataprep
 ```
 
+> Here is the [code](./06_dataprep/) to use Dataprep for EDA.
+
 
 ### 7. LIDA from Microsoft
 
@@ -80,7 +86,7 @@ To install LIDA, you can use pip. Open your terminal or command prompt and run t
 ```bash
 conda create -n lida python=3.10 -y
 conda activate lida
-pip install -U lida
+pip install -U lida llmx openai
 pip install llmx[transformers]
 ```
 
@@ -99,3 +105,17 @@ export HF_TOKEN=<your_huggingface_token>
 lida ui --port=8080 --docs
 ```
 Then navigate to [http://localhost:8080/](http://localhost:8080/) in your browser.
+
+> The code to use LIDA for EDA is available [here](./07_lida/).
+
+### 8. Pandas-AI
+To install Pandas-AI, you can use pip. Open your terminal or command prompt and run the following command:
+
+```bash
+conda create -n pandas_ai python=3.10 -y
+conda activate pandas_ai
+pip install pandasai
+pip install pandasai-litellm
+pip install ipykernel
+```
+> The code to use Pandas-AI for EDA is available [here](./08_pandas_ai/).
