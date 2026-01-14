@@ -81,6 +81,7 @@ To install LIDA, you can use pip. Open your terminal or command prompt and run t
 conda create -n lida python=3.10 -y
 conda activate lida
 pip install -U lida
+pip install llmx[transformers]
 ```
 
 > Openai API key is required to use LIDA. You can set it as an environment variable:
